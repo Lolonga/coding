@@ -18,7 +18,7 @@
   <body>
     <p id="outpt">0</p>
     
-    <button onclick = 'btnClicked("clear")' width="200px"   >Clr</button>
+    <button onclick = 'btnClicked("clear")' style='width: 200px'   >Clr</button>
     <button onclick = 'btnClicked("plusminus")'>+/-</button>
 
     <button onclick = 'btnClicked("div")'      >/</button><br>
@@ -34,7 +34,7 @@
     <button onclick='btnClicked(2)'>2</button>
     <button onclick='btnClicked(3)'>3</button>
     <button onclick='btnClicked("+")'>+</button><br>
-    <button onclick='btnClicked(0)' width="200">0</button>
+    <button onclick='btnClicked(0)' style="width: 200px">0</button>
     <button onclick='btnClicked(".")'>.</button>
 
     <button onclick='btnClicked("=")'>=</button><br>
@@ -43,10 +43,9 @@
       var state = "firstNum";
       var firstNum = '';
       var secondNum = '';
-      var decimal = 'left';
       var op = "None";
       function btnClicked(n) {
-        if (typeof(n) == 'number') {
+        if (typeof(n) == 'number' || n == '.') {
           if (state == 'firstNum') {
             firstNum = changeNumber(firstNum,n);
           }
@@ -55,9 +54,6 @@
           }
         }
         
-        if (n == '.') {
-          decimal = 'right';
-        }
         
         if (['+','-','x','div'].includes(n)) {
           op = n;
@@ -83,7 +79,6 @@
           firstNum = '';
           secondNum = '';
           op = 'None';
-          decimal = 'left';
           state = 'firstNum';
           displayNumber(0);
         }   
