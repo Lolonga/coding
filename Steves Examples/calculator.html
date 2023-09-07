@@ -59,7 +59,7 @@
           decimal = 'right';
         }
         
-        if (n in ['+','-','x','div']) {
+        if (['+','-','x','div'].includes(n)) {
           op = n;
           state = "secondNum";
         }
