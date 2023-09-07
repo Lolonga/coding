@@ -1,6 +1,6 @@
 <html>
   <body>
-    <p id="outpt"></p>
+    <p id="outpt">0</p>
     <button id = "buttonClear" onclick = 'btnClicked("clear")'>Clr</button>
     <button id = "buttonDivide" onclick = 'btnClicked("div")'>/</button><br>
     <button id = "button7"  onclick='btnClicked(7)'>7</button>
@@ -23,20 +23,27 @@
       var state = "firstNum";
       var firstNum = 0;
       var secondNum = 0;
+      var decimal = 'left';
       var op = "None";
       function btnClicked(n) {
         if isNumber(n) {
           if (state == 'firstNum') {
             firstNum = firstNum * 10 + n;
+            if (decimal == 'right') {
+              firstNum = firstNum/10;
+            }
             displayNumber(firstNum);
           }
           if (state == 'secondNum') {
             secondNum = secondNum * 10 + n;
+            if (decimal == 'right') {
+              secondNum = secondNum/10;
+            }
             displayNumber(secondNum);
           }
         }
         if (n == '.') {
-
+          decimal = 'right';
         }
         
         if (n in ['+','-','x','div']) {
@@ -56,16 +63,24 @@
             displayNumber(firstNum);
           }
           if (op == 'x') {
-
+            firstNum = firstNum * secondNum;
+            secondNum = 0;
+            displayNumber(firstNum);
           }
 
           if (op == 'div') {
-
+            firstNum = firstNum / secondNum;
+            secondNum = 0;
+            displayNumber(firstNum);
           }
         }
-          
-          
-          
+        if (n == 'clear') {
+          firstNum = 0;
+          secondNum = 0;
+          op = 'None';
+          decimal = 'left';
+          state = 'firstNum';
+        }   
       }
 
       function displayNumber(n) {
