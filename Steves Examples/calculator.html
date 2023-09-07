@@ -41,8 +41,8 @@
 
     <script>
       var state = "firstNum";
-      var firstNum = 0;
-      var secondNum = 0;
+      var firstNum = '';
+      var secondNum = '';
       var decimal = 'left';
       var op = "None";
       function btnClicked(n) {
@@ -80,24 +80,31 @@
         }
         
         if (n == 'clear') {
-          firstNum = 0;
-          secondNum = 0;
+          firstNum = '';
+          secondNum = '';
           op = 'None';
           decimal = 'left';
           state = 'firstNum';
+          displayNumber(0);
         }   
       }
 
       function changeNumber(num,n) {
-        num = num * 10 + n;
-        if (decimal == 'right') {
-          num = num/10;
-        }
+        num = num + n
         displayNumber(num);
         return(num);
       }
 
+      function plusminus(num) {
+        x = -parseFloat(num);
+        x = x.toString()
+        displayNumber(x)
+        return(x);
+      }
+        
       function calculateNumber() {
+        firstNum = parseFloat(firstNum);
+        secondNum = parseFloat(secondNum);
         if (op == '+') {
           firstNum = firstNum + secondNum;
         }
@@ -111,7 +118,8 @@
         if (op == 'div') {
           firstNum = firstNum / secondNum;
         }
-        secondNum = 0;
+        firstNum = firstNum.toString();
+        secondNum = '';
         displayNumber(firstNum);
       }
       
