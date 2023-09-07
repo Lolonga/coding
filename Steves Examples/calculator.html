@@ -16,7 +16,7 @@
     <button onclick = 'btnClicked("plusminus")'>+/-</button>
     <button onclick = 'btnClicked("%")'        >%</button>
     <button onclick = 'btnClicked("div")'      >/</button><br>
-    <button onclick='btnClicked(7)'            >7</button>
+    <button onclick = 'btnClicked(7)'          >7</button>
     <button onclick='btnClicked(8)'>8</button>
     <button onclick='btnClicked(9)'>9</button>
     <button onclick='btnClicked("x")'>x</button><br>
@@ -41,18 +41,10 @@
       function btnClicked(n) {
         if (isInteger(n)) {
           if (state == 'firstNum') {
-            firstNum = firstNum * 10 + n;
-            if (decimal == 'right') {
-              firstNum = firstNum/10;
-            }
-            displayNumber(firstNum);
+            firstNum = changeNum(firstNum,n);
           }
           if (state == 'secondNum') {
-            secondNum = secondNum * 10 + n;
-            if (decimal == 'right') {
-              secondNum = secondNum/10;
-            }
-            displayNumber(secondNum);
+            secondNum = changeNum(secondNum,n);
           }
         }
         if (n == '.') {
@@ -107,6 +99,15 @@
         }   
       }
 
+      function changeNumber(num,n) {
+        num = num * 10 + n;
+        if (decimal == 'right') {
+          num = num/10;
+        }
+        displayNumber(num);
+        return(num);
+      }
+      
       function displayNumber(n) {
         document.getElementById('outpt').innerHTML = str(n);
       }
