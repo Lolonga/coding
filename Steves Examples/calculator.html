@@ -13,6 +13,8 @@
       <p id="outpt">0</p>
     </div>
     <button id = "buttonClear" onclick = 'btnClicked("clear")'>Clr</button>
+    <button id = "buttonPM" onclick = 'btnClicked("plusminus")'>+/-</button>
+    <button onclick = 'btnClicked("%")'>%</button>
     <button id = "buttonDivide" onclick = 'btnClicked("div")'>/</button><br>
     <button id = "button7"  onclick='btnClicked(7)'>7</button>
     <button id = "button8"  onclick='btnClicked(8)'>8</button>
@@ -60,6 +62,17 @@
         if (n in ['+','-','x','div']) {
           op = n;
           state = "secondNum";
+        }
+
+        if (n == 'plusminus') {
+          if (state == "firstNum") {
+            firstNum = -firstNum;
+            displayNumber(firstNum);
+          }
+          if (state == "secondNum") {
+            secondNum = -secondNum;
+            displayNumber(secondNum);
+          }
         }
 
         if (n == '=') {
