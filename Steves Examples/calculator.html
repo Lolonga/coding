@@ -39,7 +39,7 @@
       var decimal = 'left';
       var op = "None";
       function btnClicked(n) {
-        if isNum(n) {
+        if isInteger(n) {
           if (state == 'firstNum') {
             firstNum = firstNum * 10 + n;
             if (decimal == 'right') {
