@@ -1,47 +1,55 @@
 <html>
   <head>
     <style>
+      div {
+        background: black;
+      }
+      
       button {
         width: 100px;
         height: 100px;
         font-size: 20px;
         border-radius: 50px;
-        background: orange;
         margin: 10px;
+        background: gray;
       }
       p {
-        border: 1px solid black;
+        border: 2px solid blue;
         width: 400px;
         height: 30px;
         text-align: right;
         padding: 20px;
+        border-radius: 10px;
       }
+      
     </style>
   </head>
   <body>
-    <p id="outpt">0</p>
+    <div></div>
+      <p id="outpt">0</p>
+      
+      <button onclick = 'btnClicked("clear")' style='width: 220px; background: lightgray'   >Clear</button>
+      <button onclick = 'btnClicked("plusminus")' style="background: lightgray'>+/-</button>
+  
+      <button onclick = 'btnClicked("div")'   style="background: orange"   >/</button><br>
+      <button onclick = 'btnClicked(7)'          >7</button>
+      <button onclick='btnClicked(8)'>8</button>
+      <button onclick='btnClicked(9)'>9</button>
+      <button onclick='btnClicked("x")' style="background: orange">x</button><br>
+      <button onclick='btnClicked(4)'>4</button>
+      <button onclick='btnClicked(5)'>5</button>
+      <button onclick='btnClicked(6)'>6</button>
+      <button onclick='btnClicked("-" style="background: orange")'>-</button><br>
+      <button onclick='btnClicked(1)'>1</button>
+      <button onclick='btnClicked(2)'>2</button>
+      <button onclick='btnClicked(3)'>3</button>
+      <button onclick='btnClicked("+" style="background: orange")'>+</button><br>
+      <button onclick='btnClicked(0)' style="width: 220px">0</button>
+      <button onclick='btnClicked(".")'>.</button>
+  
+      <button onclick='btnClicked("=")'>=</button><br>
+    </div>
     
-    <button onclick = 'btnClicked("clear")' style='width: 220px'   >Clear</button>
-    <button onclick = 'btnClicked("plusminus")'>+/-</button>
-
-    <button onclick = 'btnClicked("div")'      >/</button><br>
-    <button onclick = 'btnClicked(7)'          >7</button>
-    <button onclick='btnClicked(8)'>8</button>
-    <button onclick='btnClicked(9)'>9</button>
-    <button onclick='btnClicked("x")'>x</button><br>
-    <button onclick='btnClicked(4)'>4</button>
-    <button onclick='btnClicked(5)'>5</button>
-    <button onclick='btnClicked(6)'>6</button>
-    <button onclick='btnClicked("-")'>-</button><br>
-    <button onclick='btnClicked(1)'>1</button>
-    <button onclick='btnClicked(2)'>2</button>
-    <button onclick='btnClicked(3)'>3</button>
-    <button onclick='btnClicked("+")'>+</button><br>
-    <button onclick='btnClicked(0)' style="width: 220px">0</button>
-    <button onclick='btnClicked(".")'>.</button>
-
-    <button onclick='btnClicked("=")'>=</button><br>
-
     <script>
       var state = "firstNum";
       var firstNum = '';
