@@ -39,7 +39,7 @@
       var decimal = 'left';
       var op = "None";
       function btnClicked(n) {
-        if (isInteger(n)) {
+        if (typeof(n) == 'number') {
           if (state == 'firstNum') {
             firstNum = changeNum(firstNum,n);
           }
@@ -68,28 +68,9 @@
         }
 
         if (n == '=') {
-          if (op == '+') {
-            firstNum = firstNum + secondNum;
-            secondNum = 0;
-            displayNumber(firstNum);
-          }
-          if (op == '-') {
-            firstNum = firstNum - secondNum;
-            secondNum = 0;
-            displayNumber(firstNum);
-          }
-          if (op == 'x') {
-            firstNum = firstNum * secondNum;
-            secondNum = 0;
-            displayNumber(firstNum);
-          }
-
-          if (op == 'div') {
-            firstNum = firstNum / secondNum;
-            secondNum = 0;
-            displayNumber(firstNum);
-          }
+          calculateNumber();
         }
+        
         if (n == 'clear') {
           firstNum = 0;
           secondNum = 0;
@@ -106,6 +87,24 @@
         }
         displayNumber(num);
         return(num);
+      }
+
+      function calculateNumber() {
+        if (op == '+') {
+          firstNum = firstNum + secondNum;
+        }
+        if (op == '-') {
+          firstNum = firstNum - secondNum;
+        }
+        if (op == 'x') {
+          firstNum = firstNum * secondNum;
+        }
+
+        if (op == 'div') {
+          firstNum = firstNum / secondNum;
+        }
+        secondNum = 0;
+        displayNumber(firstNum);
       }
       
       function displayNumber(n) {
