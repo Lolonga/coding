@@ -6,12 +6,18 @@
         height: 100px;
         font-size: 20px;
       }
+      p {
+        border: 1px solid black;
+        width: 400px;
+        height: 50px;
+        text-align: right;
+        padding: 20px;
+      }
     </style>
   </head>
   <body>
-    <div style='border: 1px solid black; width: 400px; height: 50px; text-align: right'>
-      <p id="outpt">0</p>
-    </div>
+    <p id="outpt">0</p>
+    
     <button onclick = 'btnClicked("clear")'    >Clr</button>
     <button onclick = 'btnClicked("plusminus")'>+/-</button>
     <button onclick = 'btnClicked("%")'        >%</button>
@@ -47,6 +53,7 @@
             secondNum = changeNum(secondNum,n);
           }
         }
+        
         if (n == '.') {
           decimal = 'right';
         }
