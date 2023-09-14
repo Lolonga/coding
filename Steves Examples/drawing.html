@@ -1,0 +1,32 @@
+<html>
+<head>
+<style>
+canvas {
+	border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<canvas id='myCanvas' width = 300 height = 300></canvas><br><br>
+<button onclick='move(10,0)'>Right</button>
+<button onclick='move(-10,0)'>Left</button>
+<button onclick='move(0,-10)'>Up</button>
+<button onclick='move(0,10)'>Down</button>
+
+
+<script>
+	var x = 100;
+	var y = 100;
+	var c = document.getElementById('myCanvas');
+	var ctx = c.getContext("2d");
+	ctx.moveTo(x,y);
+
+	function move(dx,dy) {
+		x = x + dx;
+		y = y + dy;
+		ctx.lineTo(x,y);
+		ctx.stroke();
+	}
+</script>
+</body>
+</html>
