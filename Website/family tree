@@ -1,0 +1,42 @@
+<html>
+<body>
+<head>
+<style>
+header1{
+width:100px;
+height:200px;
+color:red;
+font-size:45px;
+text-align: center;
+}
+
+img{
+width:250px;
+height:250px;
+margin:50px;
+}
+
+</style>
+
+
+<center><header1>Lolonga family tree</header1></center>
+<table>
+<tr>
+<td><center><img src="mom.jpg"> </td>
+
+<td><img src="byatanga.jpg"> </td>
+<td><img src="albertine.jpg"></td>
+<c/center>
+</table>
+</tr>
+<table>
+<tr>
+
+<td><center><img src="me.jpg"></td>
+<td><img src="felix.jpg"></td>
+<td><img src="abedi.jpg"></center></td>
+</table>
+</tr>
+
+</html>
+</body>
