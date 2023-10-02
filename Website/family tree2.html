@@ -1,0 +1,56 @@
+<!--   First problem:  Your filename was family tree, not family tree.html -->
+
+<html>
+<body>
+<head>
+<style>
+header1{
+width:100px;
+height:200px;
+color:red;
+font-size:45px;
+text-align: center;
+}
+
+img{
+width:25px;
+height:25px;
+margin:50px;
+}
+
+</style>
+
+
+<center><header1>Lolonga family tree</header1></center>
+  <canvas id="myCanvas" width="500" height = "500"></canvas>
+<table>
+<tr>
+<td><center><img src="mom.jpg"  alt="mom"> </td>
+
+<td><img src="byatanga.jpg"> </td>
+<td><img src="albertine.jpg"></td>
+<c/center>
+</table>
+</tr>
+<table>
+<tr>
+
+<td><center><img src="me.jpg"></td>
+<td><img src="felix.jpg"></td>
+<td><img src="abedi.jpg"></center></td>
+</table>
+</tr>
+  <script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(200,450);
+ctx.lineTo(200,400);
+ctx.lineTo(400,400);
+ctx.lineTo(400,450);
+ctx.moveTo(300,400);
+ctx.lineTo(300,200);
+ctx.stroke();
+  </script>
+</body>
+</html>
