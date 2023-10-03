@@ -34,7 +34,7 @@ height:50px;
 </head>
   <body>
 
-<center><header1>Lolonga family tree</header1></center>
+<center><header1>Lolonga family tree</header1></center><br>
     <div>
       <canvas id="myCanvas"></canvas>
 <img src="mom.jpg"  alt="mom" style="top: 400px; right:10px">
@@ -51,6 +51,7 @@ height:50px;
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+    ctx.lineTo(10,10);
 ctx.moveTo(200,450);
 ctx.lineTo(200,400);
 ctx.lineTo(400,400);
