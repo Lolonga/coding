@@ -83,7 +83,7 @@
         </div>
      
        <div class="footer">
-            <p id="UserResult"></p>
+            <p id="UserResult">this is a test</p>
             <h>  what type of grill are you lookin for: </h>
             <input type="radio" id="gasRd"  name="card"> Gas </input>
         
@@ -112,15 +112,15 @@
             //searchBtn.onclick =function(){
             function searchBtn(){
                 if(propaineRd.checked){
-                    UserResult.innerHTML="you want Propaine Grills";
+                    UserResult.textContent="you want Propaine Grills";
                 }
     
                 if (gasRd.checked) {
-                    UserResult.innerHTML ="you want Gas Grills"
+                    UserResult.textContent ="you want Gas Grills"
                 }
                 
                 if(electricRd.checked){
-                    UserResult.innerHTML="you want Electric grills";
+                    UserResult.textContent="you want Electric grills";
                 }
             }
         </script>
