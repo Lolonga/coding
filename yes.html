@@ -91,7 +91,7 @@
         
             <input type="radio"  id="electricRd" name="card"> elctric   </input>
                <!-- I changed this by adding the onclick-->
-            <button id="searchBtn" type="submit" onclick="searchBtn()"> search</button>
+            <button id="searchBtn" type="submit" onclick="search()"> search</button>
         </div>
     
     
@@ -110,7 +110,7 @@
             
             // I changed the structure of this line
             //searchBtn.onclick =function(){
-            function searchBtn(){
+            function search(){
                 if(propaineRd.checked){
                     console.log('propane');
                     UserResult.textContent="you want Propaine Grills";
