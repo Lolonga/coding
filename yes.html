@@ -1,143 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">  <!-- this line is not needed because you do not have a file called style.css-->
-    <!-- I added this -->
-    <style>
-        img {
-            width: 200;
-        }
-    </style>
-    <title>Document</title>  <!-- This line can be used to change the label of the tab at the top of the browser-->
-</head>
-<body>
-
-    <div class="header"> 
-        
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">  <!-- this line is not needed because you do not have a file called style.css-->
+        <!-- I added this -->
+        <style>
+            img {
+                width: 200;
+            }
+        </style>
+        <title>Document</title>  <!-- This line can be used to change the label of the tab at the top of the browser-->
+    </head>
+    <body>
+        <div class="header"> 
             <img src="in.jpg" id="logo">
-        <!--I changed this by adding links to jump to-->
-    <div class="links"> 
-            <a href="#cart">cart</a>
-            <a href="#shopping">shop</a>
-            <a href="#service">services</a>
-        </div>
-     </div>
-
-
-   <div id="h">
-   <h> <strong> Gas grills </strong> </h>
-   </div>
-   <div class="item-container">
-    <div id="item">
-        <img src="pr1.jpg">
-       
-    </div>
-   </div>
-
-   <div class="item-container">
-    <div id="item">
-        <img src="pr2.jpg">
-       
-    </div>
-   </div>
-
-   <div class="item-container">
-    <div id="item">
-        <img src="pr3.jpg">
+            <!--I changed this by adding links to jump to-->
+            <div class="links"> 
+                <a href="#cart">cart</a>
+                <a href="#shopping">shop</a>
+                <a href="#service">services</a>
+            </div>
+         </div>
     
-    </div>
-   </div>
-
-     
-    <br>
-
-    <div id="h">
-        <h> <strong> Propaine grills </strong> </h>
+        <div id="h">
+           <h> <strong> Gas grills </strong> </h>
         </div>
-
-    <div class="item-container">
-        <div id="item">
-            <img src="chp1.jpg">
-           
+        <div class="item-container">
+            <div id="item">
+                <img src="pr1.jpg">
+            </div>
         </div>
-       </div>
-
-       <div class="item-container">
-        <div id="item">
-            <img src="chp2.jpg">
+    
+        <div class="item-container">
+            <div id="item">
+                <img src="pr2.jpg">
+               
+            </div>
+        </div>
+    
+        <div class="item-container">
+            <div id="item">
+                <img src="pr3.jpg">
+            </div>
+        </div>
+    
+        <div id="h">
+            <h> <strong> Propaine grills </strong> </h>
+        </div>
+    
+        <div class="item-container">
+            <div id="item">
+                <img src="chp1.jpg"> 
+            </div>
+        </div>
         
+        <div class="item-container">
+            <div id="item">
+                <img src="chp2.jpg">
+            </div>
         </div>
-       </div>
-
-       <div class="item-container">
-        <div id="item">
-            <img src="chp3.jpg">
-           
+    
+        <div class="item-container">
+            <div id="item">
+                <img src="chp3.jpg">
+            </div>
         </div>
-       </div>
-    <!--I added this so there would be places for the links to jump to-->
-    <div id="cart">
-        <h2>Cart</h2>
-        These are the items in your cart:
-    </div>
-
-    <div id="shopping">
-        <h2>Shopping</h2>
-    </div>
-    <div id = "service">
-        <h2>Services</h2>
-    </div>
- 
+        <!--I added this so there would be places for the links to jump to-->
+        <div id="cart">
+            <h2>Cart</h2>
+            These are the items in your cart:
+        </div>
+    
+        <div id="shopping">
+            <h2>Shopping</h2>
+        </div>
+        <div id = "service">
+            <h2>Services</h2>
+        </div>
+     
        <div class="footer">
-        <p id="UserResult"></p>
-        <h>  what type of grill are you lookin for: </h>
-        <input type="radio" id="gasRd"  name="card"> Gas </input>
-   
-        <input type="radio" id="propaineRd" name="card"> Propaine </input>
-   
-        <input type="radio"  id="electricRd" name="card"> elctric   </input>
-           <!-- I changed this by adding the onclick-->
-   <button id="searchBtn" type="submit" onclick="searchBtn()"> search</button>
-   
-
-       </div>
-
-
-       <script>
-
-const searchBtn = document.getElementById("searchBtn");
-
-const gasRd = document.getElementById("gasRd");
-
-const propaineRd = document.getElementById("propaineRd");
-
-const electricRd = document.getElementById("electricRd");
-
-const UserResult = document.getElementById("UserResult");
-
-
-// I changed the structure of this line
-//searchBtn.onclick =function(){
-           function searchBtn(){
-    if(propaineRd.checked){
-        UserResult.textContent="you want Propaine Grills";
-    }
-
-if (gasRd.checked) {
-    UserResult.textContent ="you want Gas Grills"
-}
-
-if(electricRd.checked){
-UserResult.textContent="you want Electric grills";
-}
-
-}
-
-
-
-
-       </script>
-</body>
+            <p id="UserResult"></p>
+            <h>  what type of grill are you lookin for: </h>
+            <input type="radio" id="gasRd"  name="card"> Gas </input>
+        
+            <input type="radio" id="propaineRd" name="card"> Propaine </input>
+        
+            <input type="radio"  id="electricRd" name="card"> elctric   </input>
+               <!-- I changed this by adding the onclick-->
+            <button id="searchBtn" type="submit" onclick="searchBtn()"> search</button>
+        </div>
+    
+    
+        <script>
+    
+            const searchBtn = document.getElementById("searchBtn");
+            
+            const gasRd = document.getElementById("gasRd");
+            
+            const propaineRd = document.getElementById("propaineRd");
+            
+            const electricRd = document.getElementById("electricRd");
+            
+            const UserResult = document.getElementById("UserResult");
+            
+            
+            // I changed the structure of this line
+            //searchBtn.onclick =function(){
+            function searchBtn(){
+                if(propaineRd.checked){
+                    UserResult.textContent="you want Propaine Grills";
+                }
+    
+                if (gasRd.checked) {
+                    UserResult.textContent ="you want Gas Grills"
+                }
+                
+                if(electricRd.checked){
+                UserResult.textContent="you want Electric grills";
+                }
+            }
+        </script>
+    </body>
 </html>
