@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
+    <!-- I added this -->
+    <style>
+        img {
+            width = "200";
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -81,7 +86,8 @@
         <input type="radio" id="propaineRd" name="card"> Propaine </input>
    
         <input type="radio"  id="electricRd" name="card"> elctric   </input>
-   <button id="searchBtn" type="submit"> search</button>
+           <!-- I changed this by adding the onclick-->
+   <button id="searchBtn" type="submit" onclick="searchBtn()"> search</button>
    
 
        </div>
@@ -100,8 +106,9 @@ const electricRd = document.getElementById("electricRd");
 const UserResult = document.getElementById("UserResult");
 
 
-
-searchBtn.onclick =function(){
+// I changed the structure of this line
+//searchBtn.onclick =function(){
+           function searchBtn(){
     if(propaineRd.checked){
         UserResult.textContent="you want Propaine Grills";
     }
